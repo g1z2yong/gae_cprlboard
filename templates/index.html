@@ -1,0 +1,93 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<HTML>
+ <HEAD>
+  <TITLE> {{ my_name}} </TITLE>
+  <META NAME="Generator" CONTENT="EditPlus">
+  <META NAME="Author" CONTENT="">
+  <META NAME="Keywords" CONTENT="">
+  <META NAME="Description" CONTENT="">
+  <link type="text/css" rel="stylesheet" href="/stylesheets/style.css" />
+  <script type="text/javascript" src="/wbox/jquery1.4.2.js"></script> 
+  <script type="text/javascript" src="/wbox/mapapi.js"></script> 
+  <script type="text/javascript" src="/wbox/wbox-min.js"></script>
+  <link rel="stylesheet" type="text/css" href="/wbox/wbox/wbox.css" />
+ </HEAD>
+
+ <BODY>
+
+<div id="page">
+
+  <H1> {{ my_name}}  </H1>
+  <H2> <A href="http://172.21.17.50:1234">board</A></H2>
+
+ <a href="/output">Download Signature</a><p>
+
+ <button onclick="wBox.showBox()">Add A New Record</button>
+  <div id="content">
+     <TABLE border=1 width="1024">
+	 <col width="60" />
+	 <col width="60" />
+	 <col width="200" />
+	 <col width="70" />
+	 <col width="70" />
+	 <col width="50" />
+	 <tr>
+		 <th>Date</th>
+		<th>USER</th>
+		<th>VNAME</th>
+		<th>SIGID</th>
+		<th>Group</th>
+		<th>Command</th>
+	 </tr>
+	 {% for cprl in cprls %}
+	 <tr>
+	    <td> {{ cprl.submitdate|date:"Y-m-d" }} </td>
+	 	<td> {{ cprl.user }} </td>
+		<td> {{ cprl.vname }} </td>
+		<td> {{ cprl.sigid }} </td>
+		<td> {{ cprl.category }} </td>
+		<td> <button onclick="editit({{ cprl.key.id }})">Edit</button> </td>
+	 </tr>
+	 {% endfor %}
+	   </TABLE>
+	   <button onclick="wBox.showBox()">Add A New Record</button>
+	 <div class="pagenavi">
+		<span class="older">-1</span>
+		<span class="newer">+1</span>
+	 </div>
+		<h2 class="center">{{ my_name}}</h2>
+		<p class="center">@ by zyguo</p>
+	</div>
+	      
+</div>
+
+
+<script type="text/javascript"> 
+var wBox=$("#wbox1").wBox({
+   	title: "Add New Record",
+   	html: " <FORM METHOD=POST ACTION='/add'>{% spaceless %}
+	    {{ form.as_p|escapejs }}
+		    {% endspaceless %}<INPUT TYPE='submit'> </FORM>	"
+ });
+
+function editit(id)
+{
+$.get("/edit/"+id, {}, function (data, textStatus){
+	this;
+	//alert(data);
+
+var wBox2=$("#wbox1").wBox({
+    title: "Edit My Report",
+    html:data, 
+ });
+
+	wBox2.showBox();
+});
+
+}
+
+</script>
+
+ </BODY>
+</HTML>

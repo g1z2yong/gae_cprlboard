@@ -1,0 +1,528 @@
+@charset "utf-8";
+/*  
+Theme Name:Miniblog
+Theme URI: http://www.gengbing.com/
+Description: Power by Wordpress,Designed by<a href="http://www.gengbing.com/">GoneWTW</a>,Thanks all my friends.
+Author: GoneWTW
+Author URI: http://www.gengbing.com/
+Tags: black, white, one columns, miniblog, twitter, fanfou
+Publish Date:2009-2-28
+*/
+
+/* The overall */
+* {margin:0;padding:0px;}
+body {
+	background:url(images/green-waves.jpg) repeat-y;
+	background-position:center top;
+	background-color:#121C25;
+	font-size:14px;
+	font-family:'Microsoft YaHei',Verdana,Arial,Helvetica,'Lucida Grande','Lucida Sans Unicode',Sans-serif;
+	color:black;
+	}
+table{
+  border-width:1px;   
+  border-color:#666666;   
+  table-layout:fixed;
+}
+td
+{
+	word-wrap : break-word ;
+}
+h1,h3,h4,h5,small{ font-weight:normal;}
+#a {color:#fff; text-decoration:none;} 
+/* a {color:#358fe5; text-decoration:none;} */
+a:hover {color:#ffc728; text-decoration:underline; }
+img {border:0;}
+.clear {clear:both;height:0;overflow:hidden;}
+#page {margin:0 auto;width:1400px;}
+.right {float:right;}
+.f-btnfix {
+	position:fixed;
+	top:0;
+	left:0;
+	width:0;
+	height:0;
+	overflow:hidden;
+	visibility:hidden;
+}
+
+/* head */
+#head {
+	border-bottom:1px dashed #ffffff;
+	zoom:1;
+	}
+#head_menu {
+	font-family:Georgia,Verdana,"BitStream vera Sans",Arial,Helvetica,'Lucida Grande','Lucida Sans Unicode',Sans-serif;
+	}
+#head_menu ul {
+	float:left;	
+	width:545px;
+	padding-left:15px;
+	}
+#head_menu ul li {
+	float:left;
+	list-style:none;
+	font-size:13px;
+	height:45px;
+	line-height:45px;
+	display:block;
+	width:60px;
+	text-align:center;
+	}
+#head_menu ul li a,#head_menu ul li a:hover {
+	color:#FFFFFF;font-weight:bold;
+	}
+.search {
+	float:right;
+	height:25px;
+	line-height:25px;
+	overflow: hidden;
+	padding:10px 0;
+	width:140px;
+	}
+.search input {
+	height:22px;
+	line-height:20px;
+	overflow: hidden;
+	}
+#head_logo {
+}
+#head_logo h1 {
+	font-size:24px;
+	line-height:20px;
+	height:20px;
+	font-family:"Microsoft YaHei",Sans-serif;
+	padding:25px 10px 5px 20px;
+	font-weight:bold;
+	}
+#head_logo h1 a {color:#fff;text-decoration:none;} 
+#head_logo #description {
+	font-size:13px;
+	height:16px;
+	padding:10px 10px 10px 20px;
+	margin:0;
+	border-bottom:1px dashed #fff;
+	color:#fff;
+}
+#head_logo #description span {
+	height:16px;	
+	}
+#head_logo #description a {
+	width:16px;
+	height:16px;
+	float:right;
+	}
+.page_menu {
+	height:32px;
+	line-height:32px;
+	text-align:right;
+	padding-right:10px;
+	}
+.page_menu li {
+	display:inline;
+	padding-left:14px;
+	list-style:none;
+	}
+
+/* content */
+#content {
+	margin:0 auto;
+	padding-top:5px;
+	}
+.entry {
+	padding:5px 0px 5px 0px;
+	border-bottom:1px solid #ffffff;
+	zoom:1;
+	}
+#content .con_left {
+	float:left;
+	width:49px;
+	padding:4px 20px 0;
+	}
+#content .calendar-day{
+	width:49px;
+	height:21px;
+	color:#f7fafd;
+	font-size:27px;
+	text-align:center;
+	line-height:21px;font-family:Verdana;
+	font-weight:bold;
+	font-style:italic;
+	}
+#content .calendar-week{
+	width:49px;
+	height:13px;
+	line-height:13px;
+	color:#fff;font-family:Verdana;
+	font-size:11px;
+	text-align:center;
+	padding-top:2px;
+	}
+#content .con_right {
+	float:left;
+	width:611px;
+	}
+.con_category {
+	padding-bottom:5px;
+	font-size:12px;
+	}
+.con_right .content {
+	padding:0 10px;
+	border-left:5px solid #ffffff;
+	line-height:150%;
+	}
+.con_right .content img {
+	padding:5px;
+	border:2px solid #ffffff;
+	}
+.con_right .content a {
+	color:#ffc200;
+	text-decoration:underline;
+	}
+.con_right .content a:hover {
+	color:#ffc728;
+	text-decoration:none;
+	}
+.con_category a {
+	/* color:#ffc200; */
+	text-decoration:underline;
+	}
+.con_category a:hover {
+	color:#ffc728;
+	text-decoration:none;
+	}
+.con_category h3 {display:inline;font-size:18px;font-weight:bold;}
+.con_category h4 {display:inline;font-size:18px;font-weight:bold;color: #FF0000;}
+.wp-caption {
+	text-align:center;
+	}
+.content ul,.content ol {
+	margin-left:35px;
+	padding:0 0 0 15px;
+	list-style-type:square;
+	}
+.content li {
+	padding:6px 0;
+	}
+.content .alignright {float:right;margin:0 0 5px 5px;}
+.content .alignleft {float:left;margin:0 5px 5px 0;}
+.center {
+	margin:0 auto;
+	text-align:center;
+	}
+.center h2 {
+	font-weight:bold;
+	}
+
+/* pagenavi */
+.pagenavi {
+	clear:both;
+	margin:0 auto;
+	text-align:center;
+	height:30px;
+	line-height:30px;
+	font-size:12px;
+	}
+.pagenavi .older,.pagenavi .newer {
+	padding:0 10px;
+	}
+
+/* single page */
+.page {
+	clear:both;
+	padding:5px 0;
+	}
+.page .content p {
+	line-height:200%;
+	}
+
+/* sidebar */
+#sidebar {
+	}
+.postbox_left {
+	float:left;
+	width:400px;
+	}
+.postbox_right {
+	float:left;
+	width:300px;
+	height:162px;
+	border-top:1px dashed #fff;
+	background-position:bottom right;
+	font-size:12px;
+	}
+.postbox_right h3 {font-size:16px;font-weight:bold;padding:4px 0;}
+.postbox_right p {line-height:150%;}
+
+/* post press */
+#postbox {
+	border-top:1px dashed #fff;
+	padding:5px 0;
+	}
+#postbox label{
+	float:left;
+	height:26px;
+	width:95px;
+	margin:5px 0 5px 10px;
+	line-height:26px;
+	display:block;
+	text-align:right;
+	font-size:14px;
+	}
+#postbox #title{
+	width:140px;
+	height:26px;
+	line-height:26px;
+	margin:5px;
+	border:1px solid #7F9DB9;
+	font-size:14px;
+	padding:1px 5px;
+	}
+#postbox #tags{
+	width:270px;
+	height:26px;
+	line-height:26px;
+	margin:5px;
+	border:1px solid #7F9DB9;
+	font-size:14px;
+	padding:1px 5px;
+	}
+#postbox textarea{
+	width:270px;
+	margin:5px;
+	overflow:auto;
+	border:1px solid #7F9DB9;
+	font-size:14px;
+	padding:1px 5px;
+	}
+#postbox select {
+	vertical-align:middle;
+	width:80px;
+	border:1px solid #7F9DB9;
+	}
+#postbox select option {
+	margin:-3px;
+	font-size:16px;
+	padding:2px;
+	}
+#postbox #submit{
+	margin:5px 0 5px 110px;
+	width:100px;
+	}
+
+/* footer */
+#footer {
+	font-size:12px;
+	background:url(images/bnet.png) no-repeat;
+	background-position:5px 5px;
+	text-align:right;
+	padding:10px 10px;
+	border-top:1px dashed #fff;
+	}
+#footer p {
+	line-height:150%;
+	}
+#footer span {
+	padding-right:8px;
+	}
+
+/* the head clock flash */
+#clock {
+	width:45px;
+	height:45px;
+	position:absolute;
+	top:-100px;
+	left:-24px;
+	z-index:999;
+	}
+#mainWrapper {
+	position:relative;
+	}
+
+/* blogroll style */
+.widecolumn  {
+	padding:10px 0;
+	}
+.widecolumn .content {
+	background:url(images/Alert.png) no-repeat;
+	background-position:3% 24%;
+	padding:10px 20px 10px 88px;
+	line-height:150%;
+	border-bottom:1px solid #FFF;
+	font-family:"Microsoft YaHei",Sans-serif;
+	}
+.blogroll {
+	margin:0 20px;
+	padding-bottom:10px;
+	border-bottom:1px solid #ffffff;
+	}
+.blogroll .links_style {
+	height:24px;
+	line-height:24px;
+	margin-right:15px;
+	}
+.widecolumn h2 {
+	font-size:14px;
+	font-weight:bold;
+	padding-left:20px;
+	height:30px;
+	line-height:30px;
+	}
+
+/* comments */
+.comment_title {
+	padding:10px 20px;
+	font-size:16px;
+	font-weight:bold;
+	border-bottom:1px solid #ffffff;
+	}
+.comment_title span {
+	font-size:12px;
+	font-weight:none;
+	}
+.commentlist {
+	}
+.commentlist li {
+	list-style-type:none;
+	border-bottom:1px solid #ffffff;
+	padding:5px 0;
+	}
+.bypostauthor .comment_left {
+	float:right;
+	}
+.bypostauthor .comment_right {
+	float:left;
+	}
+.bypostauthor .comment_right .comment_data {
+	padding-left:89px;
+	}
+.bypostauthor .comment_right .comment_content {
+	margin-left:89px;
+	border-left:5px solid #ffffff;
+	}
+.comment_left {
+	width:89px;
+	float:left;
+	text-align:center;
+	padding:3px 0 0 0;
+	}
+.comment_right {
+	width:611px;
+	float:left;
+	}
+.comment_data {
+	font-size:12px;
+	padding-bottom:5px;
+	}
+.comment_content {
+	padding:0 10px;
+	border-left:5px solid #ffffff;
+	line-height:150%;
+	padding-right:94px;
+	}
+.comment_name {
+	font-size:12px;
+	padding:3px 0;
+	}
+.nocomments {
+	padding:10px 20px;
+	font-size:16px;
+	font-weight:bold;
+	}
+#respond {
+	}
+.respond {
+	padding:10px 20px;
+	font-size:16px;
+	font-weight:bold;
+	border-bottom:1px solid #ffffff;
+	}
+#commentform {
+	padding:5px 20px;
+	}
+#commentform .comment_profile {
+	padding:5px 0;
+	line-height:150%;
+	}
+#commentform .comment_input {
+	padding:5px 0;
+	}
+#commentform .comment_input input {
+	font-size:14px;
+	height:24px;
+	line-height:24px;
+	padding:1px 5px;
+	}
+#commentform .comment_text {
+	padding:5px 0;
+	}
+#commentform .comment_text textarea {
+	font-size:14px;
+	line-height:150%;
+	padding:4px;
+	font-family:Verdana,"BitStream vera Sans",Arial,Helvetica,'Lucida Grande','Lucida Sans Unicode',Sans-serif;
+	}
+#submit {
+	padding:6px;
+	height:30px;
+	width:150px;
+	}
+.recent_comments {
+
+	}
+.recent_comments .h3 {
+	padding:10px 20px;
+	font-size:16px;
+	font-weight:bold;
+	border-top:1px solid #ffffff;
+	border-bottom:1px dashed #ffffff;
+	}
+.recent_comments .i_avatar {
+	list-style-type:none;
+	padding:0px 20px;
+	margin:7px 0px;
+	margin-bottom:0px;
+
+	}
+.recent_comments .i_avatar li {
+	float:left;
+	width:55px;
+	height:55px;
+	line-height:55px;
+	}
+/* SimplePie Page Template */
+.simplepie {
+	padding:5px 20px;
+	}
+.simplepie .simplepie_post {
+	padding:4px 0px;
+	}
+.simplepie .simplepie_post .content {
+
+	}
+.simplepie .simplepie_post h4 {
+	font-size:16px;
+	padding:5px 0px;
+	}
+.simplepie .simplepie_post .date {
+	font-size:12px;
+	font-weight:none;
+	color:#ffffff;
+	}
+.simplepie .simplepie_post .info {
+	border-bottom:1px solid #ffffff;
+	padding:5px 0px;
+	}
+.tags_cloud {
+padding:10px 20px;
+line-height:1.5;
+}
+.myform
+{
+}
+.demo {
+	width:760px;
+}
+.redline{
+	color: red;        
+}

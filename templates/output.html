@@ -1,0 +1,45 @@
+VER=4.299
+{{ re }}
+MODEL=00
+{{ re }}
+
+_include m:\fortinet\config\vir_grayware.txt
+{{ re }}
+
+
+_CPRL_START
+{{ re }}
+{{ re }}
+
+
+
+{% for cprl in cprls %}
+
+{{ re }}
+{{ re }}
+
+{{ cprl.cprlstring|safe|escape }}
+{{ re }}
+{{ re }}
+
+
+
+
+
+
+{% endfor %}
+
+
+_CPRL_END
+{{ re }}
+
+_include m:\fortinet\config\vir_filetypes_fc.txt
+{{ re }}
+_include m:\fortinet\config\vir_heur.txt
+{{ re }}
+_include m:\fortinet\config\vir_hll.txt
+{{ re }}
+_include  m:\fortinet\\config\vir_scripttokens.txt
+{{ re }}
+
+

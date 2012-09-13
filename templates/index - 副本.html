@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<HTML>
+ <HEAD>
+  <TITLE> {{ my_name}} </TITLE>
+  <META NAME="Generator" CONTENT="EditPlus">
+  <META NAME="Author" CONTENT="">
+  <META NAME="Keywords" CONTENT="">
+  <META NAME="Description" CONTENT="">
+  <link type="text/css" rel="stylesheet" href="/stylesheets/style.css" />
+ </HEAD>
+
+ <BODY>
+<div id="page">
+  <H1> {{ my_name}} </H1>
+
+  <div id="content">
+	{% for avwork in avworks %}
+	  <div class="entry">
+		<div class="con_left">
+			<div class="calendar-day">{{ avwork.submitdate|date:"d" }}</div>
+			<div class="calendar-week">{{ avwork.submitdate|date:"Y.m" }}</div>
+			<A href="/delete/{{ avwork.key.id }}">Delete</a>
+		</div>
+		<div class="con_right">
+			<div class="con_category"><H3>User:</H3><H4>{{ avwork.yourname }}</H4><H3>Fileset <H4>{{ avwork.filesetname }}</H4></div>
+			<div class="content">
+			Language:  {{ avwork.language }}<br>
+			Kaspersky:  {{ avwork.kav }}<br>
+			NOD32       {{ avwork.nod32 }}<br>
+			Comment: <br>
+			{{ avwork.comment|linebreaksbr }}
+			</div>
+		</div>
+		<div class="clear"></div>
+	  </div>
+	  {% endfor %}
+	 <div class="pagenavi">
+		<span class="older">-1</span>
+		<span class="newer">+1</span>
+	 </div>
+		<h2 class="center">{{ my_name}}</h2>
+		<p class="center">@ by zyguo</p>
+ 
+		 </div>
+	      
+
+	<FORM METHOD=POST ACTION="add">
+	{{ form.as_p }}
+	<INPUT TYPE="submit">
+	</FORM>
+</div>
+ </BODY>
+</HTML>
